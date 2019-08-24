@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{.siteName}}</title>
+
+  <link rel="stylesheet" href="../res/lib/layui-v2.5.4/css/layui.css">
+  <link rel="stylesheet" href="../res/css/app.css?t=154">
+  <link rel="stylesheet" href="../res/lib/font-awesome/css/font-awesome.min.css" media="all">
+</head>
+
+<body>
+<div class="layui-layout layui-layout-admin kit-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">大学生学业成长数据云</div>
+    <div class="layui-logo kit-logo-mobile">P</div>
+    <ul class="layui-nav layui-layout-right kit-nav">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="../res/img/userface.jpg" class="layui-nav-img"> 管理员
+        </a>
+      </li>
+      <li class="layui-nav-item"><a href="/login_out"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black kit-side">
+    <div class="layui-side-scroll">
+      <div class="kit-side-fold"><i class="fa fa-navicon" aria-hidden="true"></i></div>
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
+        <li class="layui-nav-item ">
+          <a class="" href="javascript:;">
+            <i class="fa fa-id-card"></i> &nbsp;&nbsp;<span>权限管理</span>
+          </a>
+          <dl class="layui-nav-child">
+            <dd>
+              <a data-url="index.html" data-icon="&#xe715;" data-title="管理员" kit-target
+                 data-id="{{$e.Id}}">
+                <i class="fa fa-user-o"></i> &nbsp;&nbsp;<span>管理员</span>
+              </a>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="layui-body" id="container">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;">主体内容加载中,请稍等...</div>
+  </div>
+
+  <div class="layui-footer" style="font-size: 12px;text-align:center;">
+    <!-- 底部固定区域 -->
+    2018 &copy; yuxiaobei Power by Beego
+  </div>
+</div>
+
+<script src="../res/lib/layui-v2.5.4/layui.js?s=36"></script>
+<script>
+    var message;
+    layui.config({
+        base: '../res/js/'
+    }).use(['app', 'message'], function () {
+        var app = layui.app,
+            $ = layui.jquery,
+            layer = layui.layer;
+        //将message设置为全局以便子页面调用
+        message = layui.message;
+        //主入口
+        app.set({
+            type: 'iframe'
+        }).init();
+    });
+</script>
+</body>
+
+</html>
