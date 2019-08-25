@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>激活</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/css/global.css">
+</head>
+<body>
+<div class="layui-container">
+  <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="background: white;">
+    <ul class="layui-tab-title">
+      <li class="layui-this">确认信息</li>
+      <li>设置用户名</li>
+      <li>设置密码</li>
+      <li>设置密码保护</li>
+      <li>邮件激活</li>
+    </ul>
+    <div class="layui-tab-content">
+      <div class="layui-tab-item layui-show">
+        <table align="center" width="500" border="0" cellpadding="0" cellspacing="0">
+          <h2>确认信息</h2>
+          <tr>
+            <td style="text-align: right">姓名:</td>
+            <td><label class="layui-form-label" style="text-align: left">李雷</label></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right">身份证号:</td>
+            <td><label class="layui-form-label" style="text-align: left">3713121989012247896</label></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right">所在学校:</td>
+            <td><label class="layui-form-label" style="text-align: left;width: 150px;">辽宁科技学院</label></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right">学号:</td>
+            <td><label class="layui-form-label" style="text-align: left">201309876</label></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: right">学院/系:</td>
+            <td><label class="layui-form-label" style="text-align: left">会计系</label></td>
+          </tr>
+          <tr>
+            <td style="text-align: right">专业:</td>
+            <td><label class="layui-form-label" style="text-align: left">会计学</label></td>
+          </tr>
+          <tr>
+            <td style="text-align: right">班级:</td>
+            <td><label class="layui-form-label" style="text-align: left">会计一班</label></td>
+          </tr>
+          <tr>
+            <td style="text-align: right">手机号:</td>
+            <td><label class="layui-form-label" style="text-align: left">会计一班</label></td>
+          </tr>
+
+        </table>
+
+
+      </div>
+      <div class="layui-tab-item">内容2</div>
+      <div class="layui-tab-item">内容3</div>
+      <div class="layui-tab-item">内容4</div>
+      <div class="layui-tab-item">内容5</div>
+    </div>
+  </div>
+</div>
+<script src="../res/layui/layui.js"></script>
+<script>
+    layui.use('element', function () {
+        var $ = layui.jquery
+            , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+        //触发事件
+        var active = {
+            tabAdd: function () {
+                //新增一个Tab项
+                element.tabAdd('demo', {
+                    title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+                    , content: '内容' + (Math.random() * 1000 | 0)
+                    , id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+                })
+            }
+            , tabDelete: function (othis) {
+                //删除指定Tab项
+                element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+                othis.addClass('layui-btn-disabled');
+            }
+            , tabChange: function () {
+                //切换到指定Tab项
+                element.tabChange('demo', '22'); //切换到：用户管理
+            }
+        };
+
+        $('.site-demo-active').on('click', function () {
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#test=/, '');
+        element.tabChange('test', layid);
+
+        element.on('tab(test)', function (elem) {
+            location.hash = 'test=' + $(this).attr('lay-id');
+        });
+
+    });
+</script>
+
+</body>
+</html>
