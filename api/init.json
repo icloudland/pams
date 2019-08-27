@@ -1,0 +1,191 @@
+{
+  "clearInfo": {
+    "clearUrl": "api/clear.json"
+  },
+  "homeInfo": {
+    "title": "首页",
+    "icon": "fa fa-home",
+    "href": "welcome.html?mpi=m-p-i-0"
+  },
+  "logoInfo": {
+    "title": "成长数据云管理",
+    "image": "../res/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": {
+    "currency": {
+      "title": "档案管理",
+      "icon": "fa fa-address-book",
+      "child": [
+        {
+          "title": "档案管理",
+          "href": "",
+          "icon": "fa fa-archive",
+          "target": "_self"
+        },
+        {
+          "title": "待归档管理",
+          "href": "page/menu.html",
+          "icon": "fa fa-window-maximize",
+          "target": "_self"
+        },
+        {
+          "title": "现行文件管理",
+          "href": "page/setting.html",
+          "icon": "fa fa-file-word-o",
+          "target": "_self"
+        },
+        {
+          "title": "资料管理",
+          "href": "page/table.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "全卷宗管理",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self"
+        },
+        {
+          "title": "综合检索",
+          "href": "",
+          "icon": "fa fa-search",
+          "target": "_self"
+        },
+        {
+          "title": "编研管理",
+          "href": "",
+          "icon": "fa fa-keyboard-o",
+          "target": "_self"
+        },
+        {
+          "title": "借阅管理",
+          "href": "",
+          "icon": "fa fa-mortar-board",
+          "target": ""
+        },
+        {
+          "title": "库房管理",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self"
+        },
+        {
+          "title": "数字化加工",
+          "href": "",
+          "icon": "fa fa-wrench",
+          "target": ""
+        },
+        {
+          "title": "档案界面管理",
+          "href": "",
+          "icon": "fa fa-wordpress",
+          "target": "_self"
+        },
+        {
+          "title": "系统维护",
+          "href": "",
+          "icon": "fa fa-info",
+          "target": ""
+        },
+        {
+          "title": "数据管理",
+          "href": "",
+          "icon": "fa fa-book",
+          "target": ""
+        }
+      ]
+    },
+    "component": {
+      "title": "组件管理",
+      "icon": "fa fa-lemon-o",
+      "child": [
+        {
+          "title": "图标列表",
+          "href": "page/icon.html",
+          "icon": "fa fa-dot-circle-o",
+          "target": "_self"
+        },
+        {
+          "title": "图标选择",
+          "href": "page/icon-picker.html",
+          "icon": "fa fa-adn",
+          "target": "_self"
+        },
+        {
+          "title": "颜色选择",
+          "href": "page/color-select.html",
+          "icon": "fa fa-dashboard",
+          "target": "_self"
+        },
+        {
+          "title": "下拉选择",
+          "href": "page/table-select.html",
+          "icon": "fa fa-angle-double-down",
+          "target": "_self"
+        },
+        {
+          "title": "文件上传",
+          "href": "page/upload.html",
+          "icon": "fa fa-arrow-up",
+          "target": "_self"
+        },
+        {
+          "title": "富文本编辑器",
+          "href": "page/editor.html",
+          "icon": "fa fa-edit",
+          "target": "_self"
+        }
+      ]
+    },
+    "other": {
+      "title": "其它管理",
+      "icon": "fa fa-slideshare",
+      "child": [
+        {
+          "title": "多级菜单",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "按钮1",
+              "href": "page/button.html",
+              "icon": "fa fa-calendar",
+              "target": "_self",
+              "child": [
+                {
+                  "title": "按钮2",
+                  "href": "page/button.html",
+                  "icon": "fa fa-snowflake-o",
+                  "target": "_self",
+                  "child": [
+                    {
+                      "title": "按钮3",
+                      "href": "page/button.html",
+                      "icon": "fa fa-snowflake-o",
+                      "target": "_self"
+                    },
+                    {
+                      "title": "表单4",
+                      "href": "page/form.html",
+                      "icon": "fa fa-calendar",
+                      "target": "_self"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "失效菜单",
+          "href": "page/error.html",
+          "icon": "fa fa-superpowers",
+          "target": "_self"
+        }
+      ]
+    }
+  }
+}
