@@ -89,7 +89,7 @@
                 </form>
               </div>
               <div>
-                <form class="layui-form" style="margin: 0 auto;max-width: 600px;padding-top: 40px;">
+                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
                   <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
                     <input type="radio" name="resetUserName" value="1" title="重设用户名"
                            checked>
@@ -108,14 +108,14 @@
                     <div class="layui-form-mid layui-word-aux">可用字母、数字、下划线,长度在4和20之间</div>
                   </div>
 
-                  <div class="layui-form-item layui-btn-radius"  style="padding: 0px 5px; background: #00F7DE;">
+                  <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
                     <input type="radio" name="resetUserName" value="0" title="不重设用户名">
                   </div>
 
-                  <div class="layui-form-item" style="clear: both">
+                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
                     <div class="layui-input-block">
                       <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
-                      <button type="button" class="layui-btn next">
+                      <button type="button" class="layui-btn next" style="margin-left: 60px;">
                         下一步
                       </button>
                     </div>
@@ -123,63 +123,73 @@
                 </form>
               </div>
               <div>
-                  <form class="layui-form" style="margin: 0 auto;max-width: 600px;padding-top: 40px;">
-                      <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
-                          <input type="radio" name="resetUserName" value="1" title="重设密码"
-                                 checked>
-                      </div>
-                      <div class="layui-form-item">
-                          <label class="layui-form-label">原密码:</label>
-                          <div class="layui-input-inline">
-                              <input type="password" placeholder="请填新密码" value="99999999999999" disabled class="layui-input"/>
-                          </div>
-                      </div>
-                      <div class="layui-form-item">
-                          <label class="layui-form-label">新密码:</label>
-                          <div class="layui-input-inline">
-                              <input type="password" placeholder="请填新密码" class="layui-input" required/>
-                          </div>
-                          <div class="layui-form-mid layui-word-aux">设置容易记住的密码，长度为6位</div>
-                      </div>
-
-                      <div class="layui-form-item">
-                          <label class="layui-form-label">确认密码:</label>
-                          <div class="layui-input-inline">
-                              <input type="password" placeholder="请填确认密码" class="layui-input" required/>
-                          </div>
-                          <div class="layui-form-mid layui-word-aux">请确认您设置的密码，和上面设置的密码一致</div>
-                      </div>
-
-                      <div class="layui-form-item" style="visibility: hidden; margin: 40px;">
-
-                      <div class="layui-form-item layui-btn-radius"  style="padding: 0px 5px; background: #00F7DE;">
-                          <input type="radio" name="resetUserName" value="0" title="不重设密码">
-                      </div>
-
-                      <div class="layui-form-item" style="clear: both">
-                          <div class="layui-input-block">
-                              <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
-                              <button type="button" class="layui-btn next">
-                                  下一步
-                              </button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-
-              <div>
-                <div style="text-align: center;margin-top: 90px;">
-                  <i class="layui-icon layui-circle"
-                     style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
-                  <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
-                    入款成功111
+                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
+                  <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
+                    <input type="radio" name="resetUserName" value="1" title="重设密码"
+                           checked>
                   </div>
-                  <div style="font-size: 14px;color: #666;margin-top: 20px;">预计两小时到账</div>
-                </div>
-                <div style="text-align: center;margin-top: 50px;">
-                  <button class="layui-btn next">再入一笔</button>
-                  <button class="layui-btn layui-btn-primary">查看账单</button>
-                </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">原密码:</label>
+                    <div class="layui-input-inline">
+                      <input type="password" placeholder="请填新密码" value="99999999999999" disabled class="layui-input"/>
+                    </div>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">新密码:</label>
+                    <div class="layui-input-inline">
+                      <input type="password" placeholder="请填新密码" class="layui-input" required/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">设置容易记住的密码，长度为6位</div>
+                  </div>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码:</label>
+                    <div class="layui-input-inline">
+                      <input type="password" placeholder="请填确认密码" class="layui-input" required/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请确认您设置的密码，和上面设置的密码一致</div>
+                  </div>
+
+                  <div class="layui-form-item layui-btn-radius"
+                       style="padding: 0px 5px; background: #00F7DE; ">
+                    <input type="radio" name="resetUserName" value="0" title="不重设密码">
+                  </div>
+
+                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
+                    <div class="layui-input-block">
+                      <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
+                      <button type="button" class="layui-btn next" style="margin-left: 60px"> 下一步</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div>
+                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
+                  <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
+                    <input type="radio" name="resetUserName" value="1" title="密码保护设置"
+                           checked>
+                  </div>
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">电子邮箱:</label>
+                    <div class="layui-input-inline">
+                      <input type="password" placeholder="请填电子邮箱" value="99999999999999" disabled class="layui-input"/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请输入正确的常用邮箱地址</div>
+                  </div>
+
+                  <div class="layui-form-item layui-btn-radius"
+                       style="padding: 0px 5px; background: #00F7DE; ">
+                    <input type="radio" name="resetUserName" value="0" title="不重设密码">
+                  </div>
+
+                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
+                    <div class="layui-input-block">
+                      <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
+                      <button type="button" class="layui-btn next" style="margin-left: 60px"> 下一步</button>
+                    </div>
+                  </div>
+                </form>
               </div>
 
               <div>
@@ -187,7 +197,7 @@
                   <i class="layui-icon layui-circle"
                      style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
                   <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
-                    入款成功22222
+                    邮箱激活
                   </div>
                   <div style="font-size: 14px;color: #666;margin-top: 20px;">预计两小时到账</div>
                 </div>
@@ -197,14 +207,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <hr>
-          <div style="color: #666;margin-top: 30px;margin-bottom: 40px;padding-left: 30px;">
-            <h3>说明</h3><br>
-            <h4>入款到保险箱</h4>
-            <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
-            <br><h4>入款到现金</h4>
-            <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
           </div>
         </div>
       </div>
