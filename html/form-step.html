@@ -29,61 +29,62 @@
           <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
             <div carousel-item>
               <div>
-                <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
-                  <div class="layui-form-item">
+                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">姓名:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">花生</div>
+                      <div class="layui-form-mid ">花生</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">身份证号:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">371415198709075787</div>
+                      <div class="layui-form-mid ">371415198709075787</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">所在学校:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">辽宁科技学院</div>
+                      <div class="layui-form-mid">辽宁科技学院</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">学号:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">201309876</div>
+                      <div class="layui-form-mid">201309876</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">学院/系:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">会计系</div>
+                      <div class="layui-form-mid">会计系</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">专业:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">会计学</div>
+                      <div class="layui-form-mid">会计学</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" >
                     <label class="layui-form-label">班级:</label>
                     <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">会计一班</div>
+                      <div class="layui-form-mid">会计一班</div>
                     </div>
                   </div>
                   <div class="layui-form-item">
                     <label class="layui-form-label">手机号:</label>
-                    <div class="layui-input-block">
-                      <div class="layui-form-mid layui-word-aux">dd</div>
+                    <div class="layui-input-inline">
+                      <input type="text" value="13244674456" class="layui-input"/>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
                     <div class="layui-input-block">
-                      <button class="layui-btn" lay-submit lay-filter="formStep">
-                        &emsp;下一步&emsp;
-                      </button>
+
                       <button class="layui-btn layui-btn-primary">关闭</button>
+                      <button class="layui-btn" lay-submit lay-filter="formStep" style="margin-left: 60px;">
+                        下一步
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -165,25 +166,55 @@
               </div>
 
               <div>
-                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
-                  <div class="layui-form-item layui-btn-radius" style="padding: 0px 5px; background: #00F7DE;">
-                    <input type="radio" name="resetUserName" value="1" title="密码保护设置"
-                           checked>
-                  </div>
-                  <div class="layui-form-item">
-                    <label class="layui-form-label">电子邮箱:</label>
+                <form class="layui-form" style="margin: 0 auto;max-width: 800px;padding-top: 40px;">
+                  <blockquote class="layui-elem-quote">
+                    温馨提醒：密码保护设置是您找回用户名和密码的重要方式！请您认真填写，并牢记您的密码找回问题及其答案
+                  </blockquote>
+                  <div class="layui-form-item" style="margin-top: 40px;">
+                    <label class="layui-form-label" style="width: 125px">电子邮箱:</label>
                     <div class="layui-input-inline">
-                      <input type="password" placeholder="请填电子邮箱" value="99999999999999" disabled class="layui-input"/>
+                      <input type="text" class="layui-input"/>
                     </div>
-                    <div class="layui-form-mid layui-word-aux">请输入正确的常用邮箱地址</div>
+                    <div class="layui-form-mid layui-word-aux">电子邮箱是您找回密码的重要途径，请输入正确的常用邮箱地址</div>
                   </div>
 
-                  <div class="layui-form-item layui-btn-radius"
-                       style="padding: 0px 5px; background: #00F7DE; ">
-                    <input type="radio" name="resetUserName" value="0" title="不重设密码">
+                  <blockquote class="layui-elem-quote" style="margin-top: 40px;">
+                    设置密码找回问题及答案，以便丢失账号信息后能找回账号及密码
+                  </blockquote>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">密码提示问题1:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请设置您容易记住的密码提示问题和密码</div>
                   </div>
 
-                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">密码提示问题答案1:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请牢记您设置的问题1答案</div>
+                  </div>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">密码提示问题2:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请设置您容易记住的密码提示问题和密码</div>
+                  </div>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">密码提示问题答案2:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">请输入提示问题答案，并牢记问题答案
+                    </div>
+                  </div>
+                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 60px;">
                     <div class="layui-input-block">
                       <button type="button" class="layui-btn layui-btn-primary pre">上一步</button>
                       <button type="button" class="layui-btn next" style="margin-left: 60px"> 下一步</button>
@@ -193,18 +224,34 @@
               </div>
 
               <div>
-                <div style="text-align: center;margin-top: 90px;">
-                  <i class="layui-icon layui-circle"
-                     style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
-                  <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
-                    邮箱激活
+                <form class="layui-form" style="margin: 0 auto;max-width: 800px;padding-top: 40px;">
+                  <blockquote class="layui-elem-quote">我们已经将激活码发送至您的注册邮箱，请您登陆邮箱查收注册邮件，获取激活码</blockquote>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">激活码:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                    <div class="layui-input-inline" style="width: 90px;">
+                      <button type="button" class="layui-btn layui-btn-primary">激活</button>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">如果没有收到激活邮件,点此重新发送</div>
                   </div>
-                  <div style="font-size: 14px;color: #666;margin-top: 20px;">预计两小时到账</div>
-                </div>
-                <div style="text-align: center;margin-top: 50px;">
-                  <button class="layui-btn next">再入一笔</button>
-                  <button class="layui-btn layui-btn-primary">查看账单</button>
-                </div>
+
+                  <div class="layui-form-item">
+                    <label class="layui-form-label" style="width: 125px;">您的邮箱为:</label>
+                    <div class="layui-input-inline">
+                      <label class="layui-form-label">guoboxin@qq.com</label>
+                    </div>
+                    <div class="layui-input-inline" style="width: 90px;">
+                      <button type="button" class="layui-btn layui-btn-primary">修改</button>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center;margin-top: 50px;">
+                    <button type="button" class="layui-btn next">以后再激活</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -229,8 +276,8 @@
             elem: '#stepForm',
             filter: 'stepForm',
             width: '100%', //设置容器宽度
-            stepWidth: '750px',
-            height: '600px',
+            stepWidth: '900px',
+            height: '700px',
             stepItems: [{
                 title: '确认信息'
             }, {
