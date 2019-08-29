@@ -29,7 +29,7 @@
           <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
             <div carousel-item>
               <div>
-                <form class="layui-form" style="margin: 0 auto;max-width: 650px;padding-top: 40px;">
+                <form class="layui-form" style="margin: 0 auto;max-width: 550px;padding-top: 40px;text-align: center;position: relative;left: 100px">
                   <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">姓名:</label>
                     <div class="layui-input-block">
@@ -66,19 +66,32 @@
                       <div class="layui-form-mid">会计学</div>
                     </div>
                   </div>
-                  <div class="layui-form-item" >
+                  <div class="layui-form-item" style="margin: 0;">
                     <label class="layui-form-label">班级:</label>
                     <div class="layui-input-block">
                       <div class="layui-form-mid">会计一班</div>
                     </div>
                   </div>
-                  <div class="layui-form-item">
+                  <div class="layui-form-item" >
                     <label class="layui-form-label">手机号:</label>
                     <div class="layui-input-inline">
                       <input type="text" value="13244674456" class="layui-input"/>
                     </div>
+                    <div class="layui-form-mid layui-word-aux">手机号和固定电话请至少填写一种</div>
                   </div>
-                  <div class="layui-form-item" style="clear: both;text-align: center;margin-top: 80px;">
+                  <div class="layui-form-item" >
+                    <label class="layui-form-label">固定电话:</label>
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input"/>
+                    </div>
+                  </div>
+                  <div class="layui-form-item" pane="">
+                    <div class="layui-input-inline">
+                      <input type="checkbox" name="like1[write]" lay-skin="primary" title="我已经阅读并接受" checked=""/>
+                    </div>
+                    <div class="layui-form-mid" style="position: relative;left: -40px;"><a >《大学生建档信息诚信承诺书》</a></div>
+                  </div>
+                  <div class="layui-form-item" style="text-align: center;margin-top: 60px;position: relative;left: -60px">
                     <div class="layui-input-block">
 
                       <button class="layui-btn layui-btn-primary">关闭</button>
@@ -228,7 +241,7 @@
                   <blockquote class="layui-elem-quote">我们已经将激活码发送至您的注册邮箱，请您登陆邮箱查收注册邮件，获取激活码</blockquote>
 
                   <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 125px;">激活码:</label>
+                    <label class="layui-form-label" >激活码:</label>
                     <div class="layui-input-inline">
                       <input type="text" class="layui-input"/>
                     </div>
@@ -239,7 +252,7 @@
                   </div>
 
                   <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 125px;">您的邮箱为:</label>
+                    <label class="layui-form-label" >您的邮箱为:</label>
                     <div class="layui-input-inline">
                       <label class="layui-form-label">guoboxin@qq.com</label>
                     </div>
