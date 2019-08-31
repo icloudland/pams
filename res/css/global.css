@@ -501,6 +501,53 @@ body .fly-user-main{position: relative; min-height: 600px;}
 .fly-none p{margin-top: 50px; padding: 0 15px; font-size: 20px; color: #999; font-weight: 300;}
 .fly-list-one .fly-none{min-height: 70px;}
 
+.layuiadmin-card-text {
+  background-color: #f8f8f8;
+  color: #777;
+  padding: 24px
+}
+
+.layuiadmin-card-text .layui-text-top {
+  padding-bottom: 10px
+}
+
+.layuiadmin-card-text .layui-text-top i {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #009688
+}
+
+.layuiadmin-card-text .layui-text-top a {
+  line-height: 24px;
+  font-size: 16px;
+  vertical-align: top
+}
+
+.layuiadmin-card-text .layui-text-center {
+  height: 44px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  overflow: hidden
+}
+
+.layuiadmin-card-text .layui-text-bottom {
+  position: relative
+}
+
+.layuiadmin-card-text .layui-text-bottom a {
+  color: #777;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  word-break: break-all
+}
+
+.layuiadmin-card-text .layui-text-bottom span {
+  color: #CCC;
+  font-size: 12px;
+  position: absolute;
+  right: 0
+}
+
 
 @media screen and (max-width: 768px) {
 	.fly-main{width: 100%;}
