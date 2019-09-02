@@ -19,7 +19,7 @@
       "child": [
         {
           "title": "档案管理",
-          "href": "active.html",
+          "href": "table.html",
           "icon": "fa fa-archive",
           "target": "_self"
         },
