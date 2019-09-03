@@ -8,6 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="../res/lib/layui-v2.5.4/css/layui.css" media="all">
   <link rel="stylesheet" href="../res/css/public.css" media="all">
+
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="layuimini-container">
@@ -24,6 +29,54 @@
   </div>
 </div>
 <script src="../res/lib/layui-v2.5.4/layui.js" charset="utf-8"></script>
+
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container" style="display: inline;">
+    <div class="btn-group">
+      <button type="button" class=" btn dropdown-toggle layui-btn "
+              style="padding: 0px 12px; font-size: 12px;border-radius: 0px;" data-toggle="dropdown">
+        <i class="layui-icon layui-icon-search" style="font-size: 14px;"></i>
+        检索 <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">普通检索</a></li>
+        <li class="divider"></li>
+        <li><a href="#">高级查找</a></li>
+      </ul>
+    </div>
+
+    <button class="layui-btn data-add-btn">
+      <i class="layui-icon layui-icon-file" style="font-size: 14px;"></i>
+      添加
+    </button>
+
+    <div class="btn-group">
+      <button type="button" class=" btn dropdown-toggle layui-btn "
+              style="padding: 0px 12px; font-size: 12px;border-radius: 0px;" data-toggle="dropdown">
+        <i class="layui-icon layui-icon-form" style="font-size: 14px;"></i>
+        著录方式 <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">空记录</a></li>
+        <li class="divider"></li>
+        <li><a href="#">已当前记录新建</a></li>
+      </ul>
+    </div>
+
+    <button class="layui-btn data-add-btn">
+      <i class="layui-icon layui-icon-edit" style="font-size: 14px;"></i>
+      修改
+    </button>
+
+    <button class="layui-btn data-add-btn">
+      <i class="layui-icon layui-icon-delete" style="font-size: 14px;"></i>
+      删除
+    </button>
+  </div>
+
+
+</script>
+
 <script>
     layui.use(['form', 'table'], function () {
         var $ = layui.jquery,
@@ -33,6 +86,7 @@
         table.render({
             elem: '#currentTableId',
             url: '../api/table.json',
+            toolbar: '#toolbarDemo',
             cols: [[
                 {type: "checkbox", width: 50, fixed: "left"},
                 {field: 'id', width: 100, title: 'ID', sort: true, hide: true},
