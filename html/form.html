@@ -13,17 +13,17 @@
 <div class="layuimini-container">
   <div class="layuimini-main">
 
-    <form class="layui-form" action="">
+    <form class="layui-form" action="" lay-filter="archivesForm">
       <div class="layui-form-item">
         <label class="layui-form-label">档号</label>
         <div class="layui-input-block">
-          <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入档号" class="layui-input">
+          <input type="text" name="fn" autocomplete="off" placeholder="请输入档号" class="layui-input">
         </div>
       </div>
       <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">案卷题名</label>
         <div class="layui-input-block">
-          <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+          <textarea placeholder="请输入内容" name="archivesName" class="layui-textarea"></textarea>
         </div>
       </div>
 
@@ -31,19 +31,19 @@
         <div class="layui-inline">
           <label class="layui-form-label">全宗号</label>
           <div class="layui-input-inline">
-            <input type="text" name="number" autocomplete="off" class="layui-input">
+            <input type="text" name="groupNumber" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">目录号</label>
           <div class="layui-input-inline">
-            <input type="text" name="date" autocomplete="off" class="layui-input">
+            <input type="text" name="catNo" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">案卷号</label>
           <div class="layui-input-inline">
-            <input type="tel" name="url" autocomplete="off" class="layui-input">
+            <input type="tel" name="archivesFilesID" autocomplete="off" class="layui-input">
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
         <div class="layui-inline">
           <label class="layui-form-label">密级</label>
           <div class="layui-input-inline">
-            <select >
+            <select>
               <option value="">保密</option>
               <option value="">绝密</option>
             </select>
@@ -108,7 +108,7 @@
         <div class="layui-inline">
           <label class="layui-form-label">起始时间</label>
           <div class="layui-input-inline">
-            <input type="text"  lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            <input type="text" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
@@ -156,7 +156,7 @@
           </div>
         </div>
         <div class="layui-inline">
-          <label class="layui-form-label">脱离载体存址</label>
+          <label class="layui-form-label" style="width: 85px">脱离载体存址</label>
           <div class="layui-input-inline">
             <input type="text" autocomplete="off" class="layui-input">
           </div>
@@ -178,7 +178,7 @@
           </div>
         </div>
         <div class="layui-inline">
-          <label class="layui-form-label">脱离载体编号</label>
+          <label class="layui-form-label" style="width: 85px">脱离载体编号</label>
           <div class="layui-input-inline">
             <input type="text" autocomplete="off" class="layui-input">
           </div>
@@ -229,8 +229,16 @@
 <script src="../res/lib/layui-v2.5.4/layui.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
     layui.use(['form', 'layedit', 'laydate'], function () {
-        var form = layui.form
+        var $ = layui.jquery
+            , form = layui.form
             , layer = layui.layer
             , layedit = layui.layedit
             , laydate = layui.laydate;
@@ -278,17 +286,24 @@
             return false;
         });
 
-        //表单初始赋值
-        form.val('example', {
-            "username": "贤心" // "name": "value"
-            , "password": "123456"
-            , "interest": 1
-            , "like[write]": true //复选框选中状态
-            , "close": true //开关状态
-            , "sex": "女"
-            , "desc": "我爱 layui"
-        })
-
+        let mode = GetQueryString("mode");
+        let aid = GetQueryString("id");
+        if (mode != null && mode === "edit") {
+            $.getJSON("../api/table.json", "", function (data) {　 //each循环 使用$.each方法遍历返回的数据date
+                $.each(data.data, function (i, item) {
+                    if (item.id.toString() === aid) {
+                        //表单初始赋值
+                        form.val('archivesForm', {
+                            "fn": item.fn,
+                            "archivesName": item.archivesName,
+                            "groupNumber": item.groupNumber,
+                            "catNo": item.catNo,
+                            "archivesFilesID":item.archivesFilesID
+                        });
+                    }
+                })
+            });
+        }
 
     });
 </script>
