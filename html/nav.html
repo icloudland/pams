@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="layui-container">
-  <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="background: white;">
+  <div class="layui-tab layui-tab-card" lay-filter="docDemoTabBrief" style="background: white;">
     <ul class="layui-tab-title">
       <li class="layui-this">确认信息</li>
       <li>设置用户名</li>
@@ -19,47 +19,74 @@
     </ul>
     <div class="layui-tab-content">
       <div class="layui-tab-item layui-show">
-        <table align="center" width="500" border="0" cellpadding="0" cellspacing="0">
-          <h2>确认信息</h2>
+        <table class="layui-table" lay-skin="nob" style="border: #acafb1 1px solid; text-align: center;">
+          <colgroup>
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200">
+          </colgroup>
+          <tbody>
           <tr>
-            <td style="text-align: right">姓名:</td>
-            <td><label class="layui-form-label" style="text-align: left">李雷</label></td>
-          </tr>
-
-          <tr>
-            <td style="text-align: right">身份证号:</td>
-            <td><label class="layui-form-label" style="text-align: left">3713121989012247896</label></td>
-          </tr>
-
-          <tr>
-            <td style="text-align: right">所在学校:</td>
-            <td><label class="layui-form-label" style="text-align: left;width: 150px;">辽宁科技学院</label></td>
-          </tr>
-
-          <tr>
-            <td style="text-align: right">学号:</td>
-            <td><label class="layui-form-label" style="text-align: left">201309876</label></td>
-          </tr>
-
-          <tr>
-            <td style="text-align: right">学院/系:</td>
-            <td><label class="layui-form-label" style="text-align: left">会计系</label></td>
+            <td><a style="">基本信息</a></td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
           </tr>
           <tr>
-            <td style="text-align: right">专业:</td>
-            <td><label class="layui-form-label" style="text-align: left">会计学</label></td>
+            <td><a style="">基本信息</a></td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
           </tr>
           <tr>
-            <td style="text-align: right">班级:</td>
-            <td><label class="layui-form-label" style="text-align: left">会计一班</label></td>
+            <td><a style="">基本信息</a></td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
           </tr>
           <tr>
-            <td style="text-align: right">手机号:</td>
-            <td><label class="layui-form-label" style="text-align: left">会计一班</label></td>
+            <td><a style="">基本信息</a></td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
           </tr>
-
+          <tr>
+            <td><a style="">基本信息</a></td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+            <td>基本信息</td>
+          </tr>
+          </tbody>
         </table>
+        <div class="layui-card" style="border: #acafb1 1px solid;">
+          <div class="layui-card-header">基本信息</div>
+          <div class="layui-card-body">
+            <form>
+              <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">姓名</label>
+                  <div class="layui-input-inline">
+                    <label class="layui-form-label">于小北</label>
+                  </div>
+                </div>
 
+                <div class="layui-inline">
+                  <label class="layui-form-label">出生日期</label>
+                  <div class="layui-input-inline">
+                    <label class="layui-form-label">于小北</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 
       </div>
       <div class="layui-tab-item">内容2</div>
