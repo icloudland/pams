@@ -5,8 +5,52 @@
   <title>信息</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="../res/lib/layui-v2.5.4/css/layui.css">
+  <link rel="stylesheet" href="../res/css/global.css">
 </head>
 <body>
+<div class="fly-header layui-bg-black">
+  <div class="layui-container">
+    <ul class="layui-nav fly-nav layui-hide-xs">
+      <li class="layui-nav-item layui-this">
+        <a href="/"><i class="layui-icon layui-icon-home"></i>首页</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="/"><i class="layui-icon layui-icon-list"></i>信用档案</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="/"><i class="layui-icon layui-icon-read"></i>信用服务</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="/"><i class="layui-icon layui-icon-template-1"></i>信用资讯</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="/"><i class="layui-icon layui-icon-chat"></i>家校互动</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="/"><i class="layui-icon layui-icon-help"></i>帮助中心</a>
+      </li>
+    </ul>
+    <ul class="layui-nav fly-nav-user">
+
+
+      <li class="layui-nav-item">
+        <a class="fly-nav-avatar" href="javascript:;">
+          <cite class="layui-hide-xs">于小北</cite>
+          <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
+          <img src="../res/images/default.jpg">
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="active.html"><i class="layui-icon">&#xe620;</i>信息激活</a></dd>
+          <dd><a href="info.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a>
+          </dd>
+          <hr style="margin: 5px 0;">
+          <dd><a href="login.html" style="text-align: center;">退出</a></dd>
+        </dl>
+      </li>
+
+    </ul>
+  </div>
+</div>
 <div class="layui-container">
   <div class="layui-tab layui-tab-card" lay-filter="docDemoTabBrief" style="background: white;">
     <ul class="layui-tab-title">
@@ -204,6 +248,11 @@
       <div class="layui-tab-item">内容5</div>
     </div>
   </div>
+</div>
+
+<div class="fly-footer" style="margin-top: 20px;">
+  <p><a href="" target="_blank">大学生学业成长数据云</a> 2019 &copy; <a href="" target="_blank">xxx职业技术学院</a>
+  </p>
 </div>
 <script src="../res/lib/layui-v2.5.4/layui.js"></script>
 <script>

@@ -36,9 +36,9 @@
         检索 <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">普通检索</a></li>
+        <li><a href="#">精确检索</a></li>
         <li class="divider"></li>
-        <li><a href="#">高级查找</a></li>
+        <li><a href="#">模糊检索</a></li>
       </ul>
     </div>
 
@@ -55,9 +55,10 @@
         著录方式 <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">空记录</a></li>
+        <li><a href="#" id="drop-a-new"><i id="drop-a-new-i" class="layui-icon layui-icon-ok"></i> 空记录</a></li>
         <li class="divider"></li>
-        <li><a href="#">已当前记录新建</a></li>
+        <li><a href="#" id="drop-a-copy"><i id="drop-a-copy-i" class="layui-icon layui-icon-ok"
+                                            style="visibility: hidden"></i> 已当前记录新建</a></li>
       </ul>
     </div>
 
@@ -66,7 +67,7 @@
       修改
     </button>
 
-    <button class="layui-btn layui-btn-primary data-delete-btn">
+    <button class="layui-btn layui-btn-primary data-delete-btn" >
       <i class="layui-icon layui-icon-delete" style="font-size: 14px;"></i>
       删除
     </button>
@@ -110,16 +111,36 @@
             height: 'full-40'
         });
 
+        let newtype = "new";
+        let selectRowData = null;
+        let selectRow = null;
         // 监听添加操作
         $(".data-add-btn").on("click", function () {
-            layer.open({
-                type: 2,
-                title: '添加',
-                shadeClose: true,
-                shade: 0.2,
-                area: ['70%', '95%'],
-                content: "form.html"
-            });
+            if (newtype === "new") {
+                layer.open({
+                    type: 2,
+                    title: '添加',
+                    shadeClose: true,
+                    shade: 0.2,
+                    area: ['70%', '95%'],
+                    content: "form.html"
+                });
+            }
+            if (newtype === "copy") {
+                if (selectRowData === null) {
+                    layer.msg('未选中任何数据');
+                    return
+                }
+                layer.open({
+                    type: 2,
+                    title: '添加',
+                    shadeClose: true,
+                    shade: 0.2,
+                    area: ['70%', '95%'],
+                    content: "form.html?mode=edit&id=" + selectRowData.id
+                });
+            }
+
         });
 
         $(".data-edit-btn").on("click", function () {
@@ -133,37 +154,29 @@
             });
         });
 
+        $("#drop-a-new").on("click", function () {
+            $("#drop-a-new-i").css("visibility", "visible")
+            $("#drop-a-copy-i").css("visibility", "hidden")
+            newtype = "new";
+        });
+
+        $("#drop-a-copy").on("click", function () {
+            $("#drop-a-new-i").css("visibility", "hidden")
+            $("#drop-a-copy-i").css("visibility", "visible")
+            newtype = "copy";
+        });
+
         // 监听删除操作
         $(".data-delete-btn").on("click", function () {
-            var checkStatus = table.checkStatus('currentTableId')
-                , data = checkStatus.data;
-            layer.alert(JSON.stringify(data));
+            layer.alert(JSON.stringify(selectRow.data));
         });
 
-        //监听表格复选框选择
-        table.on('checkbox(currentTableFilter)', function (obj) {
-            console.log(obj)
-        });
-
-        table.on('tool(currentTableFilter)', function (obj) {
-            alert(obj.event);
-            var data = obj.data;
-            if (obj.event === 'edit') {
-                layer.alert('编辑行：<br>' + JSON.stringify(data))
-            } else if (obj.event === 'delete') {
-                layer.confirm('真的删除行么', function (index) {
-                    obj.del();
-                    layer.close(index);
-                });
-            }
-        });
-
-        var selectRowData = null
         //监听行单击事件（单击事件为：rowDouble）
-        table.on('row(currentTableFilter)', function(obj){
+        table.on('row(currentTableFilter)', function (obj) {
 
             var data = obj.data;
-            selectRowData = obj.data
+            selectRowData = obj.data;
+            selectRow = obj;
             //标注选中样式
             obj.tr.addClass('layui-table-click').siblings().removeClass('layui-table-click');
         });
@@ -171,7 +184,7 @@
         table.on('toolbar(currentTableFilter)', function (obj) {
             if (obj.event === 'edit') {
                 if (selectRowData === null) {
-                    layer.msg('未选中任何数据');``
+                    layer.msg('未选中任何数据');
                     return
                 }
                 layer.open({
@@ -180,7 +193,7 @@
                     shadeClose: true,
                     shade: 0.2,
                     area: ['70%', '95%'],
-                    content: "form.html?mode=edit&id="+selectRowData.id
+                    content: "form.html?mode=edit&id=" + selectRowData.id
                 });
             } else if (obj.event === 'delete') {
                 layer.confirm('真的删除行么', function (index) {
