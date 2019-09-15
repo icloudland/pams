@@ -43,55 +43,55 @@
         },
         {
           "title": "全卷宗管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-calendar",
           "target": "_self"
         },
         {
           "title": "综合检索",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-search",
           "target": "_self"
         },
         {
           "title": "编研管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-keyboard-o",
           "target": "_self"
         },
         {
           "title": "借阅管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-mortar-board",
           "target": ""
         },
         {
           "title": "库房管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-home",
           "target": "_self"
         },
         {
           "title": "数字化加工",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-wrench",
           "target": ""
         },
         {
           "title": "档案界面管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-wordpress",
           "target": "_self"
         },
         {
           "title": "系统维护",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-info",
           "target": ""
         },
         {
           "title": "数据管理",
-          "href": "",
+          "href": "menu.html",
           "icon": "fa fa-book",
           "target": ""
         }
